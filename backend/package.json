@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sanity/image-url": "^1.0.1",
+    "cors": "^2.8.5",
+    "expess": "^0.0.1-security",
+    "mongoose": "^6.7.2",
+    "nodemon": "^2.0.20"
+  }
+}

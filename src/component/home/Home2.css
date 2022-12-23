@@ -1,0 +1,183 @@
+
+.coll_11{
+   
+    color: rgb(230, 218, 218);
+    
+}
+.card1{
+    position:relative;
+    width: 100%;
+    height: 600px;
+    background:rgba(82, 79, 79, 0.6);
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+ }
+ 
+ .card1:hover{
+ 
+   height: 650px;
+   width: 100%;
+ 
+ }
+ 
+ .imgBx1{
+     position: absolute;
+     left: 50%;
+     top: -50px;
+     transform: translateX(-50%);
+     width: 90%;
+     height: 50%;
+     background: #fff;
+     border-radius: 20px;
+     box-shadow: 0 35px 80px rgba(0, 0, 0, 0.35);
+     overflow: hidden;
+     transition: 0.5s;
+ }
+ 
+ .imgBx1 img{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ 
+ }
+ 
+ 
+ 
+ .card1 .content1{
+ 
+     position: absolute;
+     color: rgb(241, 226, 226);
+     width: 100%;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: flex-end;
+ }
+ 
+ .card1 .content1 .details1{
+  padding: 5%;
+  text-align: center;
+  width: 100%;
+ 
+ }
+ 
+ #pad{
+     padding-top: 1%;
+     padding-bottom: 1%;
+     background-color:#212025 ;
+ }
+ 
+ .card1 .content1 .details1 h2
+ {
+     font-size: 120%;
+ }
+ .card1 .content1 .details1 p{
+     font-size: 105%;
+ }
+ .f_l{
+    padding-left: 10%;
+ }
+ .new_imgg{
+    
+    
+   
+     
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     
+ }
+
+
+
+
+
+
+
+
+
+
+ .card{
+    position:relative;
+    width: 100%;
+    height: 300px;
+    background:rgba(82, 79, 79, 0.6);
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+ }
+ 
+ .card:hover{
+ 
+   height: 350px;
+   width: 100%;
+ 
+ }
+ 
+ .imgBx{
+     position: absolute;
+     left: 50%;
+     top: -50px;
+     transform: translateX(-50%);
+     width: 90%;
+     height: 50%;
+     background: #fff;
+     border-radius: 20px;
+     box-shadow: 0 35px 80px rgba(0, 0, 0, 0.35);
+     overflow: hidden;
+     transition: 0.5s;
+ }
+ 
+ .imgBx img{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ 
+ }
+ 
+ 
+ 
+ .card .content{
+ 
+    position: inherit;
+     color: rgb(241, 226, 226);
+     width: 100%;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: flex-end;
+ }
+ 
+ .card .content .details{
+  padding: 5%;
+  text-align: center;
+  width: 100%;
+ 
+ }
+ 
+
+ 
+ .card .content .details h2
+ {
+     font-size: 100%;
+ }
+ .card .content .details p{
+     font-size: 75%;
+ }
+ .body_s{
+    padding-bottom: 5%;
+    
+    
+ }
+ .header{
+    color: #fff;
+    padding-left: 4%;
+    padding-bottom: 2%;
+ }

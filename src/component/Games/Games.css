@@ -1,0 +1,239 @@
+
+.Motion{
+    position: relative;
+    background-color: rgb(17, 17, 17);
+
+}
+.gradient1{
+    background-image: linear-gradient(
+    270deg,
+    hsl(295deg 76% 51%) 0%,
+    hsl(284deg 70% 73%) 26%,
+    hsl(257deg 70% 86%) 39%,
+    hsl(202deg 92% 90%) 50%,
+    hsl(215deg 77% 81%) 61%,
+    hsl(221deg 73% 70%) 74%,
+    hsl(220deg 76% 51%) 100%
+  );
+  filter: blur(125px);
+  position: absolute;
+  width: 50%;
+  inset: 0;
+}
+
+.nave{
+  display: block;
+}
+
+
+
+body{
+    background-color: rgb(17, 17, 17);
+}
+.maind{
+    
+    display: flex; 
+    margin-left: auto;
+    margin-right: auto; 
+    flex-direction: column; 
+    width: 100%; 
+
+    /* background-image: url('../Images/planet-05.png');
+    padding: 2%; */
+
+
+
+@media (min-width: 1536px) { 
+   } 
+}
+
+.quiz{
+    display: flex; 
+    position: relative; 
+    z-index: 10; 
+    flex-direction: column; 
+    justify-content: center; 
+    /* align-items: center;  */
+    }
+
+    .quizheading{
+
+      font-weight:900;
+      color: aliceblue;
+      text-decoration: solid;
+      
+      
+
+    }
+
+    .section{
+       padding-left: 15%;
+       padding-right:15%;
+       padding-top: 3%;
+       padding-bottom: 2%;
+       
+    }
+
+
+    .quesheading{
+       
+      color: aliceblue;
+      text-decoration: solid;
+      
+    }
+
+.navee{
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.startSection{
+    /* background-color: aqua; */
+    width: 20%;
+    margin-left: 15%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.middleSection{
+    /* background-color: blueviolet; */
+    margin-left: 42%;
+    /* margin-right: 10%; */
+    display: flex;
+    align-items: center;
+}
+.lastSection{
+    /* background-color: aqua; */
+    width: 20%;
+    margin-right: 28%;
+    display: flex;
+    align-items: center;
+}
+.bbutton{
+    padding: 5%;
+    /* padding-left: %;
+    padding-right: %; */
+    border: 1px solid rgb(49, 7, 49);
+    border-radius: 50%;
+    margin-left: 30%;
+    font-weight: bold;
+    background-color: rgb(34, 35, 36);
+    color: rgb(201, 195, 206);
+    font-family: 'Sansita', sans-serif;
+}
+.quizz{
+  font-size:xx-large;
+  font-weight: bolder;
+  color: aliceblue;
+  font-family: 'Yatra One', cursive;
+  
+}
+.imgg{
+  width: 49%;
+  margin-left: 0%;
+  padding-bottom: 4%;
+ }
+
+ .mbee{
+    
+    border: 1px solid rgb(17, 17, 17);
+    border-radius: 12px;
+    padding-left: 13%;
+    padding-bottom: 10%;
+    padding-top: 5%;
+    padding-right: 13%;
+    color: aliceblue;
+    /* background-image: linear-gradient(
+        270deg,
+        hsl(295deg 76% 51%) 0%,
+        rgb(41, 23, 48) 26%,
+        rgb(53, 28, 54) 39%,
+        rgb(44, 16, 48) 50%,
+        hsl(215deg 77% 81%) 61%,
+        hsl(221deg 73% 70%) 74%,
+        hsl(220deg 76% 51%) 100%
+      );
+       */
+       /* background-image: linear-gradient( to top left, rgb(39, 36, 39) ,rgb(65, 62, 62),rgb(41, 39, 41)) */
+    background-image: url('../Images/quiz-bnr-jan21.jpg');
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size:cover;
+    background-position-x: center;
+    
+ }
+ .startSection1{
+  /* background-color: aqua; */
+  width: 20%;
+  margin-left: 15%;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.lastSection1{
+  /* background-color: aqua; */
+  width: 20%;
+  margin-right: 10%;
+  margin-left: 40%;
+  display: flex;
+  align-items: center;
+}
+
+
+ .bbbutton{
+    padding: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border: 1px solid rgb(68, 65, 65);
+    border-radius: 12px;
+    margin-left: 20%;
+   
+    font-weight: bold;
+    background-color: rgb(39, 40, 41);
+    color: rgb(141, 140, 143);
+    background-image: linear-gradient( to top left, rgb(19, 4, 19) ,rgb(66, 32, 77),rgb(125, 55, 165));
+    font-family: 'Sansita', sans-serif;
+
+}
+
+.bbbbutton{
+    padding: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+    border: 1px solid rgb(82, 80, 80);
+    border-radius: 12px;
+    margin-left: 20%;
+    font-weight: bold;
+    background-color: rgb(39, 40, 41);
+    color: rgb(141, 140, 143);
+    background-image: linear-gradient( to top left, rgb(19, 4, 19) ,rgb(66, 32, 77),rgb(125, 55, 165));
+    font-family: 'Sansita', sans-serif;
+}
+.quizzz{
+    font-size:small;
+    font-weight: bolder;
+    color: rgb(149, 153, 156);
+    padding-top: 60%;
+    
+  }
+  .bor{
+    border: 1px solid rgb(90, 88, 88);
+    border-radius: 12px;
+    margin: 10%;
+    background-color: rgba(41, 14, 61, 0.5);
+    background-image: linear-gradient( to top left, rgb(19, 4, 19) ,rgb(66, 32, 77),rgb(125, 55, 165));
+    font-family: 'Comic Neue', cursive;
+}
+  .hh{
+    border: 1px solid rgb(90, 88, 88);
+    border-radius: 12px;
+    background-color: rgba(41, 14, 61, 0.5);
+    margin: 5%;
+    padding: 2%;
+     background-image: linear-gradient( to top left, rgba(19, 4, 19,0.3) ,rgba(66, 32, 77,0.3),rgba(102, 53, 131,0.6));
+     /* font-family: 'Luxurious Roman', cursive; */
+     font-family: 'Comic Neue', cursive;
+
+    }
