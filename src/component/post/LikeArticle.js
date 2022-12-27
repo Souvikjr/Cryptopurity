@@ -1,6 +1,6 @@
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth, db } from "./firebaseConfig";
+import { auth, db } from "../post/firebaseConfig";
 import { arrayRemove, arrayUnion, doc, updateDoc } from "firebase/firestore";
 
 export default function LikeArticle({ id, likes }) {
@@ -31,7 +31,7 @@ export default function LikeArticle({ id, likes }) {
   return (
     <div>
       <i
-        className={`fa fa-heart${!likes?.includes(user.uid) ? "-o" : ""} fa-lg`}
+        className={`bi bi-heart${!likes?.includes(user.uid) ? "-o" : ""} fa-lg`}
         style={{
           cursor: "pointer",
           color: likes?.includes(user.uid) ? "red" : null,

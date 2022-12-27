@@ -29,7 +29,7 @@ const BlogDetails = () => {
     const getNews = () => {
         axios
             .get(
-                "https://q9xfz7x1.api.sanity.io/v2021-03-25/data/query/production?query=*%5B_type%20%3D%3D%20%22post%22%5D&%24post=%22%22"
+                "https://q9xfz7x1.api.sanity.io/v2021-03-25/data/query/production?query=*%5B_type%20%3D%3D%20%22post%22%5D%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20title%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20slug%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20body%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20author%20-%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20name%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22authorImage%22%3A%20image.asset-%3Eurl%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20mainImage%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20asset%20-%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20_id%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20url%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20publishedAt%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20_updatedAt%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22categories%22%3A%20categories%5B%5D-%3Etitle%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D"
             )
             .then((response) => {
                 console.log(response.data.result);
@@ -54,7 +54,7 @@ const BlogDetails = () => {
                             particularData.map((list) => {
                                 return <>
                                     <h1 className="news_b_title">{list.title}</h1>
-                                    <img src={urlFor(list.mainImage.asset._ref).url()} className=" img-fluid img_news" alt="..." />
+                                    <img src={list.mainImage.asset.url} className=" img-fluid img_news" alt="..." />
                                     <p className="news-date">{list._createdAt}</p>
                                     <p className="news_para">{list.body[0].children[0].text}</p>
                                     {/* ------------------------------------------------------------
@@ -106,23 +106,25 @@ const BlogDetails = () => {
 
 
                     {/* ---------------------------------------------------------------- */}
+                    <form>
+                        <div className="col-md-4">
+                            <div className="row chl_news">
+                                <div className="col-md-3">
+                                    <img className="img-fluid" src={chl_img} alt="" />
+                                </div>
+                                <div className="col-md-6 chl_hed">
 
-                    <div className="col-md-4">
-                        <div className="row chl_news">
-                            <div className="col-md-3">
-                                <img className="img-fluid" src={chl_img} alt=""/>
-                            </div>
-                            <div className="col-md-6">
+                                    <h5>DEAL</h5>
+                                    <h4>Title</h4>
+                                    <p>new news</p>
+                                </div>
 
-                                <h5>DEAL</h5>
-                                <h4>Title</h4>
                             </div>
 
                         </div>
+                    </form>
 
-                    </div>
 
-                    
 
 
                 </div>

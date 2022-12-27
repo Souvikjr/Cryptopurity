@@ -1,6 +1,6 @@
 import { deleteDoc, doc } from "firebase/firestore";
 import React from "react";
-import { db, storage } from "./firebaseConfig";
+import { db, storage } from "../post/firebaseConfig";
 import { toast } from "react-toastify";
 import { deleteObject, ref } from "firebase/storage";
 
@@ -20,8 +20,7 @@ export default function DeleteArticle({ id, imageUrl }) {
   };
   return (
     <div>
-      <button><i className="fa fa-trash-o" onClick={handleDelete} style={{ cursor: "pointer" }} /></button>
-      
+      <button><i className="bi bi-trash" onClick={handleDelete} style={{ cursor: "pointer" }} />Delete </button>
     </div>
   );
 }

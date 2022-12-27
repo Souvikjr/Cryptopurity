@@ -34,7 +34,7 @@ function Home2() {
 
 
   const getNews = () => {
-    axios.get("https://q9xfz7x1.api.sanity.io/v2021-03-25/data/query/production?query=*%5B_type%20%3D%3D%20%22post%22%5D&%24post=%22%22")
+    axios.get("https://q9xfz7x1.api.sanity.io/v2021-03-25/data/query/production?query=*%5B_type%20%3D%3D%20%22post%22%5D%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20title%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20slug%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20body%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20author%20-%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20name%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22authorImage%22%3A%20image.asset-%3Eurl%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20mainImage%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20asset%20-%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20_id%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20url%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20publishedAt%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20_updatedAt%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22categories%22%3A%20categories%5B%5D-%3Etitle%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D")
       .then((response) => {
         console.log(response.data.result)
         setData(response.data.result)
@@ -104,7 +104,8 @@ function Home2() {
 
                     <div className='card'>
                       <div className='imgBx'>
-                        <img src={urlFor(value.mainImage.asset._ref).width(2000).url()} className="img" alt="..." />
+                        {/* <img src={urlFor(value.mainImage.asset._ref).width(2000).url()} className="img" alt="..." /> */}
+                        <img src={value.mainImage.asset.url} className="img" alt="..." />
                       </div>
                       <div className='content'>
                         <div className='details'>
@@ -124,6 +125,8 @@ function Home2() {
                 );
               })
             }
+
+
 
 
           </div>
@@ -134,7 +137,7 @@ function Home2() {
             {
 
               data.slice(1, 2).map((value) => {
-                // const url = 'image-5b02f7a53fe9fbf49691ff73dbf739bcb2c1fe6c-1024x768-jpg'
+                
                 return (
 
                   <form onClick={(e) => clickHandler(value.title)}>
@@ -142,7 +145,8 @@ function Home2() {
 
                     <div className='card'>
                       <div className='imgBx'>
-                        <img src={urlFor(value.mainImage.asset._ref).width(2000).url()} className="img" alt="..." />
+                        {/* <img src={urlFor(value.mainImage.asset._ref).width(2000).url()} className="img" alt="..." /> */}
+                        <img src={value.mainImage.asset.url} className="img" alt="..." />
                       </div>
                       <div className='content'>
                         <div className='details'>
@@ -176,7 +180,9 @@ function Home2() {
 
                     <div className='card'>
                       <div className='imgBx'>
-                        <img src={urlFor(value.mainImage.asset._ref).width(2000).url()} className="img" alt="..." />
+                        {/* <img src={urlFor(value.mainImage.asset._ref).width(2000).url()} className="img" alt="..." /> */}
+
+                        <img src={value.mainImage.asset.url} className="img" alt="..." />
                       </div>
                       <div className='content'>
                         <div className='details'>
@@ -213,7 +219,8 @@ function Home2() {
 
                     <div className='card'>
                       <div className='imgBx'>
-                        <img src={urlFor(value.mainImage.asset._ref).width(2000).url()} className="img" alt="..." />
+                        {/* <img src={urlFor(value.mainImage.asset._ref).width(2000).url()} className="img" alt="..." /> */}
+                        <img src={value.mainImage.asset.url} className="img" alt="..." />
                       </div>
                       <div className='content'>
                         <div className='details'>
@@ -263,7 +270,8 @@ function Home2() {
 
                     <div className='card'>
                       <div className='imgBx'>
-                        <img src={urlFor(value.mainImage.asset._ref).width(2000).url()} className="img" alt="..." />
+                        {/* <img src={urlFor(value.mainImage.asset._ref).width(2000).url()} className="img" alt="..." /> */}
+                        <img src={value.mainImage.asset.url} className="img" alt="..." />
                       </div>
                       <div className='content'>
                         <div className='details'>
@@ -301,7 +309,8 @@ function Home2() {
 
                     <div className='card'>
                       <div className='imgBx'>
-                        <img src={urlFor(value.mainImage.asset._ref).width(2000).url()} className="img" alt="..." />
+                        {/* <img src={urlFor(value.mainImage.asset._ref).width(2000).url()} className="img" alt="..." /> */}
+                        <img src={value.mainImage.asset.url} className="img" alt="..." />
                       </div>
                       <div className='content'>
                         <div className='details'>
@@ -335,7 +344,8 @@ function Home2() {
 
                     <div className='card'>
                       <div className='imgBx'>
-                        <img src={urlFor(value.mainImage.asset._ref).width(2000).url()} className="img" alt="..." />
+                        {/* <img src={urlFor(value.mainImage.asset._ref).width(2000).url()} className="img" alt="..." /> */}
+                        <img src={value.mainImage.asset.url} className="img" alt="..." />
                       </div>
                       <div className='content'>
                         <div className='details'>
@@ -370,7 +380,8 @@ function Home2() {
 
                     <div className='card'>
                       <div className='imgBx'>
-                        <img src={urlFor(value.mainImage.asset._ref).width(2000).url()} className="img" alt="..." />
+                        {/* <img src={urlFor(value.mainImage.asset._ref).width(2000).url()} className="img" alt="..." /> */}
+                        <img src={value.mainImage.asset.url} className="img" alt="..." />
                       </div>
                       <div className='content'>
                         <div className='details'>
@@ -412,7 +423,8 @@ function Home2() {
 
                     <div className='card'>
                       <div className='imgBx'>
-                        <img src={urlFor(value.mainImage.asset._ref).width(2000).url()} className="img" alt="..." />
+                        {/* <img src={urlFor(value.mainImage.asset._ref).width(2000).url()} className="img" alt="..." /> */}
+                        <img src={value.mainImage.asset.url} className="img" alt="..." />
                       </div>
                       <div className='content'>
                         <div className='details'>
@@ -450,7 +462,8 @@ function Home2() {
 
                     <div className='card'>
                       <div className='imgBx'>
-                        <img src={urlFor(value.mainImage.asset._ref).width(2000).url()} className="img" alt="..." />
+                        {/* <img src={urlFor(value.mainImage.asset._ref).width(2000).url()} className="img" alt="..." /> */}
+                        <img src={value.mainImage.asset.url} className="img" alt="..." />
                       </div>
                       <div className='content'>
                         <div className='details'>
@@ -484,7 +497,8 @@ function Home2() {
 
                     <div className='card'>
                       <div className='imgBx'>
-                        <img src={urlFor(value.mainImage.asset._ref).width(2000).url()} className="img" alt="..." />
+                        {/* <img src={urlFor(value.mainImage.asset._ref).width(2000).url()} className="img" alt="..." /> */}
+                        <img src={value.mainImage.asset.url} className="img" alt="..." />
                       </div>
                       <div className='content'>
                         <div className='details'>
@@ -521,7 +535,8 @@ function Home2() {
 
                     <div className='card'>
                       <div className='imgBx'>
-                        <img src={urlFor(value.mainImage.asset._ref).width(2000).url()} className="img" alt="..." />
+                        {/* <img src={urlFor(value.mainImage.asset._ref).width(2000).url()} className="img" alt="..." /> */}
+                        <img src={value.mainImage.asset.url} className="img" alt="..." />
                       </div>
                       <div className='content'>
                         <div className='details'>

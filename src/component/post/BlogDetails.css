@@ -142,3 +142,13 @@ share_button */
     border: 1px solid white;
     height: 150px;
   }
+  .chl_hed h5
+  {
+    color: blueviolet;
+  }
+  .chl_hed h4{
+    color: white;
+  }
+  .chl_hed p{
+    color: white;
+  }

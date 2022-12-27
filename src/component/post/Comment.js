@@ -1,9 +1,9 @@
 import { arrayRemove, arrayUnion, doc, onSnapshot, updateDoc } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
-import { db } from "../firebaseConfig";
+import { db } from "../post/firebaseConfig";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { v4 as uuidv4 } from "uuid";
-import { auth } from "./../firebaseConfig";
+import { auth } from "../post/firebaseConfig";
 
 export default function Comment({ id }) {
   const [comment, setComment] = useState("");
@@ -11,8 +11,7 @@ export default function Comment({ id }) {
   const [currentlyLoggedinUser] = useAuthState(auth);
   const commentRef = doc(db, "Articles", id);
   useEffect(() => {
-    const docRef = doc(db, "Articles", 
-    );
+    const docRef = doc(db, "Articles", id);
     onSnapshot(docRef, (snapshot) => {
       setComments(snapshot.data().comments);
     });

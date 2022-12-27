@@ -1,6 +1,6 @@
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import React, { useState, useEffect } from "react";
-import { auth, db } from "./firebaseConfig";
+import { auth, db } from "../post/firebaseConfig";
 import DeleteArticle from "./DeleteArticle";
 import { useAuthState } from "react-firebase-hooks/auth";
 import LikeArticle from "./LikeArticle";
@@ -75,9 +75,8 @@ export default function Articles() {
                     </div>
                   </div> */}
                   <h5>{title}</h5>
-                  
-                  <p>{description}</p>
-                  <p className="post_dt">{createdAt.toDate().toDateString()}</p>
+                  <p>{createdAt.toDate().toDateString()}</p>
+                  <h5>{description}</h5>
 
                   <div className="d-flex flex-row-reverse">
                     {user && <LikeArticle id={id} likes={likes} />}

@@ -24,44 +24,45 @@ export default function Navbar() {
           /> */}
           <h1>Metavy</h1>
         </div>
-        <Link className="nav-link menu_nav" to="Home">
+        <Link className="nav-link" to="Home">
           Home{" "}
         </Link>
 
-        <Link className="nav-link menu_nav" to="/">
+        <Link className="nav-link" to="/">
           Post{" "}
         </Link>
+
         <div className="login_btn">
         </div>
 
-        
+
         <div>
           <div>
-          {!user ? (
-        <>
-          <h2>
-            <Link to="/signin"><button className="so_login_btn">Login</button></Link>
-          </h2>
-          {/* Don't have an account? <Link to="/register">Signup</Link> */}
-        </>
-      ):(
-      <>
-       {user && (
-            <>
-              <span className="pe-4">
-                Signed is as {user.displayName || user.email}
+            {!user ? (
+              <>
+                <h2>
+                  <Link to="/signin"><button className="so_login_btn">Login</button></Link>
+                </h2>
+                {/* Don't have an account? <Link to="/register">Signup</Link> */}
+              </>
+            ) : (
+              <>
+                {user && (
+                  <>
+                    <span className="pe-4">
+                      Signed is as {user.displayName || user.email}
 
 
-              </span>
-              <button className="btn btn-primary btn-sm me-3"
-                onClick={() => { signOut(auth) }}
-              >Logout</button>
-            </>
-          )}
-      </>
-      )}
+                    </span>
+                    <button className="btn btn-primary btn-sm me-3"
+                      onClick={() => { signOut(auth) }}
+                    >Logout</button>
+                  </>
+                )}
+              </>
+            )}
           </div>
-      </div>
+        </div>
       </nav>
     </div>
   );
